@@ -8,7 +8,7 @@ namespace UnderscoreCs.Tests
     using Duck = Dictionary<string, object>;
 
     [TestClass]
-    public class Collections
+    public class Collections_Each
     {
         #region each
 
@@ -130,18 +130,6 @@ namespace UnderscoreCs.Tests
             mock.Verify(m => m.OnNext(It.Is<Duck>(v => (int)v["value"] == -2)));
             mock.Verify(m => m.OnNext(It.Is<Duck>(v => (int)v["value"] == -3)));
         }
-
-        #endregion
-
-        #region map
-
-        /// <summary>
-        /// map		<c>_.map(list, iteratee, [context])</c>	Alias: collect  
-        /// Produces a new array of values by mapping each value in list through a
-        /// transformation function (iteratee). The <c>iteratee</c> is passed three arguments: the value,
-        /// then the <c>index</c> (or <c>key</c>) of the iteration, and finally a reference to the entire <c>list</c>.
-        /// </summary>
-        public string MapDoc;
 
         #endregion
     }
